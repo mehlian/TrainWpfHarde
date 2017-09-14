@@ -67,7 +67,7 @@
         
         <StatusBar Grid.Row="1" Height="Auto">
             <StatusBarItem>
-                <TextBlock x:Name="Status_Text"/>
+                <TextBlock x:Name="Status_Text" Text="Ready"/>
             </StatusBarItem>
         </StatusBar>
     </Grid>
