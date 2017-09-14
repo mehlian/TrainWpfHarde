@@ -54,6 +54,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls training\Checkboxes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls training\Calendars.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -69,6 +73,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls training\Checkboxes.xaml.cs">
+      <DependentUpon>Checkboxes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls training\Calendars.xaml.cs">
       <DependentUpon>Calendars.xaml</DependentUpon>

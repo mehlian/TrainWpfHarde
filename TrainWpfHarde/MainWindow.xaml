@@ -16,6 +16,9 @@
             <TabItem Header="Calendar" >
                 <control:Calendars/>
             </TabItem>
+            <TabItem Header="CheckBoxes">
+                <control:Checkboxes/>
+            </TabItem>
         </TabControl>
 
     </Grid>
