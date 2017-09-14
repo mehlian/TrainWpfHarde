@@ -19,6 +19,12 @@
             <TabItem Header="CheckBoxes">
                 <control:Checkboxes/>
             </TabItem>
+            <TabItem Header="ComboBoxes">
+                <control:ComboBoxes/>
+            </TabItem>
+            <TabItem Header="Context Menu">
+                <control:ContextMenus/>
+            </TabItem>
         </TabControl>
 
     </Grid>

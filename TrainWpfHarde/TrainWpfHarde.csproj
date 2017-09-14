@@ -54,6 +54,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls training\ContextMenus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls training\ComboBoxes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls training\Checkboxes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -73,6 +81,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls training\ContextMenus.xaml.cs">
+      <DependentUpon>ContextMenus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls training\ComboBoxes.xaml.cs">
+      <DependentUpon>ComboBoxes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls training\Checkboxes.xaml.cs">
       <DependentUpon>Checkboxes.xaml</DependentUpon>
