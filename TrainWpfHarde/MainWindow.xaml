@@ -2,13 +2,18 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:control = "clr-namespace:TrainWpfHarde" 
+        WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="350" Width="604">
     <Grid>
-        <TabControl>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <TabControl Grid.Row="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" >
             <TabItem Header="Buttons" >
                 <control:Buttons/>
             </TabItem>
         </TabControl>
-        
+
     </Grid>
 </Window>

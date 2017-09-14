@@ -28,20 +28,50 @@ namespace TrainWpfHarde
         void OnClick1(object sender, RoutedEventArgs e)
         {
             button1.Foreground = new SolidColorBrush(Colors.Blue);
-            MessageBox.Show("On Hover click event occurs.");
+
+            Status_Text.Text = "On Hover click event occurs.";
         }
 
         void OnClick2(object sender, RoutedEventArgs e)
         {
             button2.Foreground = new SolidColorBrush(Colors.Green);
-            MessageBox.Show("On Press click event occurs.");
+            Status_Text.Text = "On Press click event occurs.";
         }
 
         void OnClick3(object sender, RoutedEventArgs e)
         {
             button1.Foreground = new SolidColorBrush(Colors.Green);
             button2.Foreground = new SolidColorBrush(Colors.Blue);
-            MessageBox.Show("On Release click event occurs.");
+            Status_Text.Text = "On Release click event occurs.";
         }
+
+        void OnDragOver(object sender, DragEventArgs e)
+        {
+            button4.Background = new SolidColorBrush(Colors.AliceBlue);
+            Status_Text.Text = "On Drag Over";
+        }
+
+        private void OnDrop(object sender, DragEventArgs e)
+        {
+            button5.Background = new SolidColorBrush(Colors.AliceBlue);
+            Status_Text.Text = "On Drop";
+        }
+
+        private void OnMouseEnter(object sender, MouseEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.Wait;
+            button5.Background = new SolidColorBrush(Colors.AliceBlue);
+            Status_Text.Text = "On Mouse Enter";
+        }
+
+        private void OnMouseLeave(object sender, MouseEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.Arrow;
+            button5.Background = new SolidColorBrush(Colors.AliceBlue);
+            Status_Text.Text = "On Mouse Leave";
+            
+        }
+
+
     }
 }

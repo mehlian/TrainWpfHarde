@@ -7,7 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <StackPanel Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Margin="10">
             <Button x:Name="button1"
                     Content="Hover"
                     Click="OnClick1"
@@ -33,6 +37,38 @@
                     Margin="10"
                     Width="150"
                     HorizontalAlignment="Center"/>
+
+            <Button x:Name="button4"
+                    Content="Drag over"
+                    Margin="10"
+                    Width="150"
+                    HorizontalAlignment="Center" 
+                    DragOver="OnDragOver" 
+                    AllowDrop="True"/>
+
+            <Button x:Name="button5"
+                    Content="On drop"
+                    Margin="10"
+                    Width="150"
+                    HorizontalAlignment="Center" 
+                    Drop="OnDrop" 
+                    AllowDrop="True"/>
+
+            <Button x:Name="button6"
+                    Content="On Mouse Enter"
+                    Margin="10"
+                    Width="150"
+                    HorizontalAlignment="Center" 
+                    MouseEnter="OnMouseEnter" 
+                    MouseLeave="OnMouseLeave"
+                    ToolTip="OK"
+                    />
         </StackPanel>
+        
+        <StatusBar Grid.Row="1" Height="Auto">
+            <StatusBarItem>
+                <TextBlock x:Name="Status_Text"/>
+            </StatusBarItem>
+        </StatusBar>
     </Grid>
 </UserControl>
