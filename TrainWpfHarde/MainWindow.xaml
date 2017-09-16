@@ -25,6 +25,15 @@
             <TabItem Header="Context Menu">
                 <control:ContextMenus/>
             </TabItem>
+            <TabItem Header="Radio Buttons">
+                <control:RadioButtons/>
+            </TabItem>
+            <TabItem Header="List Boxes">
+                <control:ListBoxes/>
+            </TabItem>
+            <TabItem Header="Images">
+                <control:ImageControl/>
+            </TabItem>
         </TabControl>
 
     </Grid>

@@ -18,6 +18,18 @@
                 <ComboBoxItem Content="Item #3"/>
             </ComboBox>
 
+            <ComboBox x:Name="SecondCBBox" Height="20" Width="100" Margin="10" SelectionChanged="OnSelectionChanged">
+                <ComboBoxItem Padding="0">
+                    <ComboBox Height="auto" Width="auto" Margin="0" >
+                        <ComboBoxItem Content="Item #1"/>
+                        <ComboBoxItem Content="Item #2"/>
+                        <ComboBoxItem Content="Item #3"/>
+                    </ComboBox>
+                </ComboBoxItem>
+                <ComboBoxItem Content="Item #2" />
+                <ComboBoxItem Content="Item #3"/>
+            </ComboBox>
+            
             <ComboBox IsEditable="True" Height="20" Width="100">
                 <ComboBoxItem Content="Item #1"/>
                 <ComboBoxItem Content="Item #2"/>

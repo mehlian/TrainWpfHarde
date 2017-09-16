@@ -27,9 +27,20 @@ namespace TrainWpfHarde
 
         private void OnSelectionChanged(object sender, EventArgs e)
         {
+            //TODO: Napraw problem z cmbBox inside cmbBox
             ComboBox comboBox = (ComboBox)sender;
             var item = (ComboBoxItem)comboBox.SelectedItem;
-            Status_Text.Text = item.Content.ToString();
+            if (item.Content is ComboBox)
+            {
+                var nestedComboBox = (ComboBox)item.Content;
+                var nestedItem = (ComboBoxItem)nestedComboBox.SelectedItem;
+                Status_Text.Text = nestedItem.Content.ToString();
+            }
+            else
+            {
+                Status_Text.Text = item.Content.ToString();
+            }
+
         }
     }
 }
