@@ -9,7 +9,8 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <TabControl Grid.Row="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" >
+        <TabControl Grid.Row="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" UseLayoutRounding="False" TabStripPlacement="Left" 
+                     >
             <TabItem Header="Buttons" >
                 <control:Buttons/>
             </TabItem>
@@ -34,7 +35,13 @@
             <TabItem Header="Images">
                 <control:ImageControl/>
             </TabItem>
+            <TabItem Header="ToggleButton">
+                <control:ToggleButtons/>
+            </TabItem>
+            <TabItem Header="InsertBox">
+                <control:TextBoxes/>
+            </TabItem>
         </TabControl>
-
+        
     </Grid>
 </Window>

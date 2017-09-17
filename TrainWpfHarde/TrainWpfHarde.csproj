@@ -54,6 +54,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls training\ToggleButtons.xaml.cs">
+      <DependentUpon>ToggleButtons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls training\TextBoxes.xaml.cs">
+      <DependentUpon>TextBoxes.xaml</DependentUpon>
+    </Compile>
     <Page Include="Controls training\ContextMenus.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -129,6 +135,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Controls training\ToggleButtons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls training\TextBoxes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
