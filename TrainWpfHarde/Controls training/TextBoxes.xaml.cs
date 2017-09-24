@@ -28,12 +28,30 @@ namespace TrainWpfHarde
         }
 
         //TODO: Sugestie podczas pisania
-        //TODO: Placeholder
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var autoSuggestBox = (TextBox)sender;
-            var filter = selectionItems.Where(p => p.StartsWith(autoSuggestBox.Text)).ToArray();
-            autoSuggestBox.Text = filter[0];
+
+            //var autoSuggestBox = (TextBox)sender;
+            //var filter = selectionItems.Where(p => p.StartsWith(autoSuggestBox.Text)).ToArray();
+            //if (filter.Length > 0)
+            //{
+            //    var a = autoSuggestBox.Text.Contains(filter.First()) ? autoSuggestBox.Text = filter.First() : autoSuggestBox.Text = autoSuggestBox.Text;
+            //}
+
+        }
+
+        private void MyTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            MyTextBox.Foreground = new SolidColorBrush(Colors.Black);
+            if (String.IsNullOrWhiteSpace(MyTextBox.Text))
+                MyTextBox.Text = "";
+        }
+
+        private void MyTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(MyTextBox.Text))
+                MyTextBox.Text = "Wprowadź tekst...";
+            MyTextBox.Foreground = new SolidColorBrush(Colors.Gray);
         }
     }
 }

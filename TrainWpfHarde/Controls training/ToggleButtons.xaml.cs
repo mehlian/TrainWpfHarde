@@ -29,5 +29,15 @@ namespace TrainWpfHarde
         {
             Status_Text.Text = MyToggleButton.IsChecked.ToString();
         }
+
+        private void My2StateToggleButton_Unchecked(object sender, RoutedEventArgs e)
+        {
+            My2StateToggleButton.Foreground = Brushes.Beige;
+        }
+
+        private void My2StateToggleButton_Checked(object sender, RoutedEventArgs e)
+        {
+            My2StateToggleButton.Foreground = Brushes.Red;
+        }
     }
 }

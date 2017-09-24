@@ -12,7 +12,13 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Margin="10">
-            <TextBox Height="30" TextInput="TextBox_TextInput" TextChanged="TextBox_TextChanged" />
+            <TextBox x:Name="MyTextBox" Height="30" TextChanged="TextBox_TextChanged" 
+                     GotFocus="MyTextBox_GotFocus" 
+                     LostFocus="MyTextBox_LostFocus" 
+                     Text="Wprowadź tekst..."/>
+            <TextBox x:Name="MyTextBox1" Height="30" TextChanged="TextBox_TextChanged" 
+                     GotFocus="MyTextBox_GotFocus" 
+                     LostFocus="MyTextBox_LostFocus" />
         </StackPanel>
         <StatusBar Grid.Row="1" Height="Auto">
             <StatusBarItem>

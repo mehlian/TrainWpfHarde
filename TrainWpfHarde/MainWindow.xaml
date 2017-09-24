@@ -41,6 +41,9 @@
             <TabItem Header="InsertBox">
                 <control:TextBoxes/>
             </TabItem>
+            <TabItem Header="Dialog Boxes">
+                <control:XamlDialogs/>
+            </TabItem>
         </TabControl>
         
     </Grid>
