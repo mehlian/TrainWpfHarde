@@ -44,6 +44,12 @@
             <TabItem Header="Dialog Boxes">
                 <control:XamlDialogs/>
             </TabItem>
+            <TabItem Header="Grid View">
+                <control:GridViews/>
+            </TabItem>
+            <TabItem Header="Menus">
+                <control:AppMenus/>
+            </TabItem>
         </TabControl>
         
     </Grid>

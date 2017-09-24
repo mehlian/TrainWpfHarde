@@ -69,6 +69,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls training\AppMenus.xaml.cs">
+      <DependentUpon>AppMenus.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls training\ToggleButtons.xaml.cs">
       <DependentUpon>ToggleButtons.xaml</DependentUpon>
     </Compile>
@@ -78,6 +81,10 @@
     <Compile Include="Controls training\XamlDialogs.xaml.cs">
       <DependentUpon>XamlDialogs.xaml</DependentUpon>
     </Compile>
+    <Page Include="Controls training\AppMenus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls training\ContextMenus.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -111,6 +118,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls training\ImageControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls training\GridViews.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -148,6 +159,9 @@
     </Compile>
     <Compile Include="Controls training\ImageControl.xaml.cs">
       <DependentUpon>ImageControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls training\GridViews.xaml.cs">
+      <DependentUpon>GridViews.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
