@@ -69,6 +69,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls training\CanvasAndShapes.xaml.cs">
+      <DependentUpon>CanvasAndShapes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls training\AppMenus.xaml.cs">
       <DependentUpon>AppMenus.xaml</DependentUpon>
     </Compile>
@@ -81,6 +84,10 @@
     <Compile Include="Controls training\XamlDialogs.xaml.cs">
       <DependentUpon>XamlDialogs.xaml</DependentUpon>
     </Compile>
+    <Page Include="Controls training\CanvasAndShapes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls training\AppMenus.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -110,6 +117,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls training\ListBoxes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls training\CustomResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dictionary1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -154,6 +169,9 @@
     <Compile Include="Controls training\ListBoxes.xaml.cs">
       <DependentUpon>ListBoxes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls training\CustomResources.xaml.cs">
+      <DependentUpon>CustomResources.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DummyControl.xaml.cs">
       <DependentUpon>DummyControl.xaml</DependentUpon>
     </Compile>
@@ -179,8 +197,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls training\PasswordBoxes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls training\PasswordBoxes.xaml.cs">
+      <DependentUpon>PasswordBoxes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

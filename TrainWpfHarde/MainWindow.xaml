@@ -3,14 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:control = "clr-namespace:TrainWpfHarde" 
         WindowStartupLocation="CenterScreen"
-        Title="MainWindow" Height="350" Width="604">
+        Title="MainWindow" Height="400" Width="604">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <TabControl Grid.Row="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" UseLayoutRounding="False" TabStripPlacement="Left" 
-                     >
+        <TabControl Grid.Row="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" UseLayoutRounding="False" 
+                    TabStripPlacement="Left">
             <TabItem Header="Buttons" >
                 <control:Buttons/>
             </TabItem>
@@ -50,7 +50,16 @@
             <TabItem Header="Menus">
                 <control:AppMenus/>
             </TabItem>
+            <TabItem Header="PasswordBox">
+                <control:PasswordBoxes/>
+            </TabItem>
+            <TabItem Header="Canvas and shapes">
+                <control:CanvasAndShapes/>
+            </TabItem>
+            <TabItem Header="Resources">
+                <control:CustomResources/>
+            </TabItem>
         </TabControl>
-        
+       
     </Grid>
 </Window>
