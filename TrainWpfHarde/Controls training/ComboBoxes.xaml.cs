@@ -27,10 +27,17 @@ namespace TrainWpfHarde
 
         private void OnSelectionChanged(object sender, EventArgs e)
         {
-            //TODO: Napraw problem z cmbBox inside cmbBox
+            
             ComboBox comboBox = (ComboBox)sender;
             var item = (ComboBoxItem)comboBox.SelectedItem;
-            if (item.Content is ComboBox)
+
+            // Bramka chroniąca przed dostępem do nieistniejącego jeszcze comboBoxa
+            //if (item == null)
+            //    return;
+            // Alternatywnie - wystarczy dodać ? na końcu zmniennej
+            // ? - null checker
+
+            if (item?.Content is ComboBox)
             {
                 var nestedComboBox = (ComboBox)item.Content;
                 var nestedItem = (ComboBoxItem)nestedComboBox.SelectedItem;
@@ -38,7 +45,7 @@ namespace TrainWpfHarde
             }
             else
             {
-                Status_Text.Text = item.Content.ToString();
+                Status_Text.Text = item?.Content.ToString();
             }
 
         }

@@ -69,6 +69,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls training\BindingExample.xaml.cs">
+      <DependentUpon>BindingExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls training\BusinessLogic\BindExample.cs" />
     <Compile Include="Controls training\CanvasAndShapes.xaml.cs">
       <DependentUpon>CanvasAndShapes.xaml</DependentUpon>
     </Compile>
@@ -84,6 +88,13 @@
     <Compile Include="Controls training\XamlDialogs.xaml.cs">
       <DependentUpon>XamlDialogs.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls training\TriggersTest.xaml.cs">
+      <DependentUpon>TriggersTest.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Controls training\BindingExample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls training\CanvasAndShapes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -201,6 +212,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls training\TriggersTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls training\PasswordBoxes.xaml.cs">
@@ -245,6 +260,25 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Controls training\BusinessLogic\BindImages\1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Controls training\BusinessLogic\BindImages\10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Controls training\BusinessLogic\BindImages\11.png" />
+    <Resource Include="Controls training\BusinessLogic\BindImages\12.png" />
+    <Resource Include="Controls training\BusinessLogic\BindImages\13.png" />
+    <Resource Include="Controls training\BusinessLogic\BindImages\2.png" />
+    <Resource Include="Controls training\BusinessLogic\BindImages\3.png" />
+    <Resource Include="Controls training\BusinessLogic\BindImages\4.png" />
+    <Resource Include="Controls training\BusinessLogic\BindImages\5.png" />
+    <Resource Include="Controls training\BusinessLogic\BindImages\6.png" />
+    <Resource Include="Controls training\BusinessLogic\BindImages\7.png" />
+    <Resource Include="Controls training\BusinessLogic\BindImages\8.png" />
+    <Resource Include="Controls training\BusinessLogic\BindImages\9.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

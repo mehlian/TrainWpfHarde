@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="TrainWpfHarde.TriggersTest"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TrainWpfHarde"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Storyboard x:Key="OnSizeChanged1"/>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.SizeChanged" SourceName="grid">
+            <BeginStoryboard x:Name="OnSizeChanged1_BeginStoryboard" Storyboard="{StaticResource OnSizeChanged1}"/>
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Grid x:Name="grid" Background="White">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="SmallWindow"/>
+                <VisualState x:Name="MediumWindow">
+                    <Storyboard>
+                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.FontSize)" Storyboard.TargetName="MessageTextBlock">
+                            <EasingDoubleKeyFrame KeyTime="0" Value="20"/>
+                        </DoubleAnimationUsingKeyFrames>
+                        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="grid">
+                            <EasingColorKeyFrame KeyTime="0" Value="Red"/>
+                        </ColorAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="LargeWindow">
+                    <Storyboard>
+                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.FontSize)" Storyboard.TargetName="MessageTextBlock">
+                            <EasingDoubleKeyFrame KeyTime="0" Value="36"/>
+                        </DoubleAnimationUsingKeyFrames>
+                        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="grid">
+                            <EasingColorKeyFrame KeyTime="0" Value="#FF25AA31"/>
+                        </ColorAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Margin="10">
+            <TextBlock Name="MessageTextBlock" Text="Dummy Text"/>
+        </StackPanel>
+        <StatusBar Grid.Row="1" Height="Auto">
+            <StatusBarItem>
+                <TextBlock x:Name="Status_Text" Text="Ready"/>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</UserControl>

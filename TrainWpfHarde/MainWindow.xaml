@@ -10,7 +10,8 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <TabControl Grid.Row="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" UseLayoutRounding="False" 
-                    TabStripPlacement="Left">
+                    TabStripPlacement="Left"
+                    SelectedItem="{Binding ElementName=tabItem, Mode=OneWay}">
             <TabItem Header="Buttons" >
                 <control:Buttons/>
             </TabItem>
@@ -59,7 +60,13 @@
             <TabItem Header="Resources">
                 <control:CustomResources/>
             </TabItem>
+            <TabItem Header="Triggers">
+                <control:TriggersTest/>
+            </TabItem>
+            <TabItem x:Name="tabItem" Header="Binding">
+                <control:BindingExample/>
+            </TabItem>
         </TabControl>
-       
+
     </Grid>
 </Window>
